@@ -1,16 +1,34 @@
 //const App = () => <h1>Oi!</h1>
 //função typeScript que retorna html
-import BlocoTexto from "./components/BlocoTexto/index.tsx";
+import BlocoTexto from "./components/BlocoTexto";
 import styles from "./App.module.css";
-
+import baiacu from "./assets/img/baiacu.png";
+import carangueijo from "./assets/img/carangueijo.png";
 
 const App = () => {
   return (
     <>
-      <h1 className = {styles.titulo}>Aquecimento com React</h1>
-      <p className = {styles.paragrafo}>Primeiro projeto utilizando React com TypeScript e Vite</p>
+      <BlocoTexto 
+        titulo="Primeiro bloco" 
+        paragrafo="Este é o texto do primeiro bloco"
+      />
 
-      <BlocoTexto />
+      <BlocoTexto 
+        titulo="Baiacu"
+        paragrafo="Também conhecido como fugu no Japão, 
+          é um peixe que intriga e amedronta muitas pessoas 
+          devido ao seu potencial venenoso. A reputação 
+          desse peixe está intimamente ligada a uma toxina 
+          mortal chamada tetrodotoxina, presente em suas 
+          vísceras, pele e músculos."
+        thumb={baiacu}
+      />
+
+      <BlocoTexto 
+        titulo="Carangueijos"
+        paragrafo="São representantes de um agrupamento de artrópodes (grupo de animais invertebrados) chamado Crustacea."
+        thumb={carangueijo}
+      />
     </>
   );
 };
